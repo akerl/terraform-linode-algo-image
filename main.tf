@@ -10,6 +10,7 @@ module "vm" {
   type            = "g6-standard-1"
   algo_repo       = "${var.algo_repo}"
   source_image_id = "linode/ubuntu18.04"
+  ssh_keys        = "${var.ssh_keys}"
 }
 
 resource "linode_image" "image" {
