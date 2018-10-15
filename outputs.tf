@@ -1,4 +1,4 @@
 output "image_id" {
-  value       = "${module.image.id}"
+  value       = "${linode_image.image.id}"
   description = "ID of the Algo Image"
 }
