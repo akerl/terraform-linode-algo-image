@@ -14,6 +14,8 @@ module "vm" {
 }
 
 resource "linode_image" "image" {
-  linode_id = "${module.vm.linode_id}"
-  disk_id   = "${module.vm.disk_id}"
+  linode_id   = "${module.vm.linode_id}"
+  disk_id     = "${module.vm.disk_id}"
+  label       = "algo-image"
+  description = "Created by Terraform"
 }
