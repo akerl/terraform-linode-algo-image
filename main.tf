@@ -3,8 +3,8 @@ resource "random_id" "vm_suffix" {
 }
 
 module "vm" {
-  source = "github.com/akerl/terraform-linode-algo-base"
-
+  source          = "armorfret/algo-base/linode"
+  version         = "0.0.2"
   name            = "algo-image_${random_id.vm_suffix.hex}"
   region          = "us-east"
   type            = "g6-standard-1"
