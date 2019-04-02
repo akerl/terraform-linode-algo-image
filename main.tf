@@ -4,14 +4,14 @@ resource "random_id" "vm_suffix" {
 
 module "vm" {
   source          = "armorfret/algo-base/linode"
-  version         = "0.0.3"
+  version         = "0.0.4"
   name            = "algo-image_${random_id.vm_suffix.hex}"
   region          = "us-east"
   type            = "g6-standard-1"
   algo_repo       = "${var.algo_repo}"
   source_image_id = "linode/ubuntu18.04"
   ssh_keys        = ["${var.ssh_keys}"]
-  users           = ["${var.users}"]
+  ssh_users       = ["${var.ssh_users}"]
 }
 
 resource "linode_image" "image" {
