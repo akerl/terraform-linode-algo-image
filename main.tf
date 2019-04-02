@@ -11,6 +11,7 @@ module "vm" {
   algo_repo       = "${var.algo_repo}"
   source_image_id = "linode/ubuntu18.04"
   ssh_keys        = ["${var.ssh_keys}"]
+  users           = ["${var.users}"]
 }
 
 resource "linode_image" "image" {
