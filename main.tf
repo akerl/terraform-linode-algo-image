@@ -4,7 +4,7 @@ resource "random_id" "vm_suffix" {
 
 module "vm" {
   source          = "armorfret/algo-base/linode"
-  version         = "0.0.2"
+  version         = "0.0.3"
   name            = "algo-image_${random_id.vm_suffix.hex}"
   region          = "us-east"
   type            = "g6-standard-1"
